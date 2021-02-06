@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>JavaScript on an HTML page</title>
+
+<script type="text/javascript">
+    function message()
+    {
+    alert("This message box was loaded with the onload event");
+    }
+</script>
+
+
+
+</head>
+<body onload="message()">
+<h1>This HTML page has a small embedded script</h1>
+
+<!-- A small script embedded on a webpage -->
+<script type="text/javascript">
+document.write("Using JavaScript for GIS");
+</script>
+
+<p>The text above looks like a paragraph but it really is
+JavaScript!</p>
+
+<p>Todays date is: <script>document.write(Date());</script></p>
+<p id="date"></p>
+
+<script src="js/datetime.js"></script>
+
+</body>
+</html>
+
+
+
+

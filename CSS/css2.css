@@ -1,0 +1,80 @@
+/* This is the external style sheet that creates a navigation bar for the web page */
+
+/* Header element*/
+
+
+h1 {
+    text-align: center;
+    color: navy;
+    font-family: "Arial";
+}
+
+/* Paragraph element */
+
+p {
+    text-align: left;
+    color: navy;
+    font-family: "Arial";
+    font-size: 90%;
+}
+
+/* Defining an unordered list to form the basis of the navigation
+bar*/
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #ea3852;
+    border: 2px solid #626664;
+    font-family: "Verdana";
+    font-weight: bold;
+   }
+
+/* A class assigned to our HTML documents to highlight the active
+page in the navigation bar */
+
+. currentpage{
+    background-color: #38eacf;
+    color: black;
+   }
+
+   /* A declaration that Header element*/
+
+li a:hover:not(.currentpage) {
+    background-color: #111;
+   }
+
+   /* Styles applied to each list item i.e. each page link*/
+
+   li {
+    float: left;
+    border-right: 1px solid #bbb;
+   }
+
+   /* Do not provide a right border for the last item (last-child in
+   list*/
+
+   li:last-child {
+    border-right: none;
+   }
+
+   /* Styling behavior of each item (page) in the list (navigation bar*/
+
+   li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+   }
+
+   /* Header element*/
+
+   li a:hover {
+    background-color: #111;
+   }
+
+   /* This is an external CSS that creates a navigation bar to aid
+   navigation within a website*/

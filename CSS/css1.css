@@ -48,6 +48,28 @@ body {
     color: white;
     background-color: black;
    }
+   /* CSS code for a span element with a class name */
+   span.emphasis {
+    font-size: 120%;
+    color: red;
+   }
+   /* Class name assigned to paragraph element */
+   p.black {
+       color: black;
+   }
+
+   /* Defining style of a division or block element with a unique ID of "divsty;ea" */
+   #divstylea {
+       background-color: #CACFD2;
+       font-family: verdana;
+       font-size: 90%;
+       position: absolute;
+       top: 600px;
+       left: 150px;
+       height: 100px;
+       width: 100px;
+       /*overflow: auto;*/
+   }
    /* This is a simple
    CSS file that shows
    styles applied to a
