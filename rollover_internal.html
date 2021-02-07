@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <script>
+
+        function moveon()
+        {
+        document.getElementById('image').src="images/palm_after.jpg";
+        }
+
+        function moveoff()
+        {
+        document.getElementById('image').src="images/palm_before.jpg";
+        }
+    
+    </script>
+
+</head>
+
+<body>
+
+    <p> The image below shows "The Palm" in Dubai in 2000 from Google
+Earth. Hover over the image to see the area in 2019</p>
+
+    <img id="image" src="images/palm_before.jpg"
+    onmouseover="moveon()"
+    onmouseout="moveoff()" width="785" height="472" />
+
+</body>
+
+</html>

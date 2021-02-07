@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        function getdefinition(text)
+        {
+        document.getElementById('definition').innerHTML=text;
+        }
+
+        function reset()
+        {
+        document.getElementById('definition').innerHTML="";
+        }
+    </script>
+</head>
+
+<body>
+    <p>Mouse over these data models:</p>
+    
+    <span onmouseover="getdefinition('Uses cells or pixels')"
+    onmouseout="reset()">Raster</span>
+
+    <br /><br />
+
+    <span onmouseover="getdefinition('Uses points, lines & polygons')"
+    onmouseout="reset()">Vector</span>
+
+    <p>This is defined as:</p><p id="definition"></p>
+
+</body>
+
+</html>

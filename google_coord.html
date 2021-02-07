@@ -1,0 +1,55 @@
+<HTML>
+<body onload=" LatLongMap()">
+
+    <script type="text/javascript"
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCaIJMyNfUVtLEo2UTrmPOdyhkMau8Vy7c&callback=initMap">
+    </script>
+
+    <div class="main">
+        <h2>Latitude and Longitude Finder Tool</h2>
+        <P> As you move the mouse over the map you can see the latitude and
+        longitude is displayed below.<br />
+        When you click on the map the latitude and longitude of the mouse
+        position is fixed and displayed in the text box.<br />
+        </P>
+
+        <div style="width:90%; margin:0px auto;">
+            <div id="mapdiv" style="width:100%; height:350px;"></div>
+            <div>
+                <div>Latitude: <span id="latspan"></span></div>
+                <div>Longitude: <span id="longspan"></span></div>
+                <div>Lat Lng: <span id="latlong"></span></div>
+                <div>Lat Lng on click:
+                <input type="text" id="latlongclicked" style="width:300px;
+                border:1px inset gray;"></span></div>
+                </div>
+            </div>
+        </div>
+        
+        <script>
+            var map;
+
+            function LatLongMap()
+            {
+            var opts = {'center': new google.maps.LatLng(55.15116238137964,
+                -6.675499230623245), 'zoom':14, 'mapTypeId':google.maps.MapTypeId.TERRAIN }
+
+            map = new google.maps.Map(document.getElementById('mapdiv'),opts);
+            
+            google.maps.event.addListener(map,'click',function(event) {
+                document.getElementById('latlongclicked').value =
+                event.latLng.lat() + ', ' + event.latLng.lng()
+                })
+
+            google.maps.event.addListener(map,'mousemove',function(event) {
+                document.getElementById('latspan').innerHTML =
+                event.latLng.lat()
+                document.getElementById('longspan').innerHTML =
+                event.latLng.lng()
+                document.getElementById('latlong').innerHTML =
+                event.latLng.lat() + ', ' + event.latLng.lng()
+                });
+            }
+        </script>
+</body>
+</HTML>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<h3> The map below is fully functional and allows you to investigate
+the campus at Coleraine</h3>
+<script type="text/javascript"
+async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCaIJMyNfUVtLEo2UTrmPOdyhkMau8Vy7c&callback=initMap"></script>
+
+<script type="text/javascript">
+
+function initialize() {
+var latlng = new google.maps.LatLng(55.15048,-6.668315);
+var myOptions = {
+zoom: 15,
+center: latlng,
+mapTypeId: google.maps.MapTypeId.ROADMAP
+};
+var map = new
+google.maps.Map(document.getElementById("map_canvas"), myOptions);
+}
+</script>
+</head>
+<body onload="initialize()">
+<div id="map_canvas" style="width:600px; height:600px"></div>
+</body>
+</html>
+
