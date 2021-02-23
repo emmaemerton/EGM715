@@ -129,6 +129,6 @@ function initMap() {
         }
     );
 
-    document.getElementById("legend").innerHTML = '<h4>Legend</h4><img class="img-responsive" src=' + anthromes1800.get('legendurl') +'>';
+    document.getElementById("legend").innerHTML = '<h4>Legend</h4><img class="img-responsive" src=' + anthromes1700.get('legendurl') +'>';
 
 }

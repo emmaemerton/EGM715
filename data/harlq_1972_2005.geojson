@@ -1,0 +1,13 @@
+{
+"type": "FeatureCollection",
+"features": [
+{ "type": "Feature", "id": 1, "properties": { "sci_name": "Harmonia axyridis", "com_name": "Harlequin Ladybird", "year": 2003, "locality": "Wye suction trap", "latitude": 51.18506, "longitude": 0.93892 }, "geometry": { "type": "Point", "coordinates": [ 0.93892, 51.18506 ] } },
+{ "type": "Feature", "id": 2, "properties": { "sci_name": "Harmonia axyridis", "com_name": "Harlequin Ladybird", "year": 2005, "locality": "Cavendish, Sue Ryder Museum", "latitude": 52.08692, "longitude": 0.63529 }, "geometry": { "type": "Point", "coordinates": [ 0.63529, 52.08692 ] } },
+{ "type": "Feature", "id": 3, "properties": { "sci_name": "Harmonia axyridis", "com_name": "Harlequin Ladybird", "year": 2005, "locality": "Colchester, Chanterelle.", "latitude": 51.90756, "longitude": 0.91848 }, "geometry": { "type": "Point", "coordinates": [ 0.91848, 51.90756 ] } },
+{ "type": "Feature", "id": 4, "properties": { "sci_name": "Harmonia axyridis", "com_name": "Harlequin Ladybird", "year": 2005, "locality": "My Garden", "latitude": 52.33571, "longitude": 1.6717 }, "geometry": { "type": "Point", "coordinates": [ 1.6717, 52.33571 ] } },
+{ "type": "Feature", "id": 5, "properties": { "sci_name": "Harmonia axyridis", "com_name": "Harlequin Ladybird", "year": 2004, "locality": "Rose Green", "latitude": 51.99305, "longitude": 0.81027 }, "geometry": { "type": "Point", "coordinates": [ 0.81027, 51.99305 ] } },
+{ "type": "Feature", "id": 6, "properties": { "sci_name": "Harmonia axyridis", "com_name": "Harlequin Ladybird", "year": 2002, "locality": "North Drive", "latitude": 53.74075, "longitude": -0.48615 }, "geometry": { "type": "Point", "coordinates": [ -0.48615, 53.74075 ] } },
+{ "type": "Feature", "id": 7, "properties": { "sci_name": "Harmonia axyridis", "com_name": "Harlequin Ladybird", "year": 2005, "locality": "Heybrdge", "latitude": 51.72619, "longitude": 0.69897 }, "geometry": { "type": "Point", "coordinates": [ 0.69897, 51.72619 ] } },
+{ "type": "Feature", "id": 8, "properties": { "sci_name": "Harmonia axyridis", "com_name": "Harlequin Ladybird", "year": 2005, "locality": "Trimley", "latitude": 51.9763, "longitude": 1.31013 }, "geometry": { "type": "Point", "coordinates": [ 1.31013, 51.9763 ] } }
+]
+}
