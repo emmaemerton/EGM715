@@ -10,6 +10,65 @@ function initMap() {
     var other_2006_2019;
     var harlq_1972_2005;
     var harlq_2006_2019;
+    var getStyle;
+
+    // Style Feature //
+    getStyle = function(feature) {
+
+        var mycolor;
+        var com_name;
+        var length;
+
+
+        // get the length of the array containing the clustered features
+        length = feature.get('features').length;
+
+        // set color depending on whether the layer is
+        // the Harlequin or Others. Look at feature name.
+        // feature is an array of features when clustered,
+        // so we'll just look at the name of the first feature in
+        // the array
+        com_name = feature.get('features')[0].get('com_name');
+            if (com_name.includes("Harlequin Ladybird")) {
+                mycolor =[255, 0, 0, 0.6];
+                } 
+            else {
+                mycolor =[0, 204, 0, 0.6];
+            }
+            return[
+            new ol.style.Style(
+                {
+                    image: new ol.style.Circle(
+                        {
+                            radius: Math.min(
+                                Math.max(length * 0.5, 8), 20
+                            ),
+                            fill: new ol.style.Fill(
+                            {
+                                color: mycolor
+                            }
+                        ),
+                        text: new ol.style.Text(
+                            {
+                                text: length.toString(),
+                                fill: new ol.style.Fill(
+                                    {
+                                        color: 'white'
+                                    }
+                                ),
+                            font: '10px Verdana, Arial'
+                            }
+                        )
+                    }
+                )
+                }
+            )
+        ];
+        };
+                            
+
+        
+        
 
     // Create a Tile layer getting tiles from OpenStreetMap source
     osm = new ol.layer.Tile(
@@ -22,14 +81,23 @@ function initMap() {
 
     other_1972_2005 = new ol.layer.Vector(
         {
-            source: new ol.source.Vector(
+            source: new ol.source.Cluster(
+
                 {
-                    format: new ol.format.GeoJSON(),
-                    url: '/data/other_1972_2005.geojson'
+                    distance: 50,
+                
+                    
+                    source: new ol.source.Vector(
+                        {
+                            format: new ol.format.GeoJSON(),
+                            url: '/data/other_1972_2005.geojson'
+                        }
+                    )
                 }
             ),
         title: 'Ladybirds (other) 1972-2005',
-        visible: false
+        visible: false,
+        style: getStyle
         }
     );
 
@@ -37,40 +105,66 @@ function initMap() {
 
     other_2006_2019 = new ol.layer.Vector(
         {
-            source: new ol.source.Vector(
+            source: new ol.source.Cluster(
+
                 {
-                    format: new ol.format.GeoJSON(),
-                    url: '/data/other_2006_2019.geojson'
+                    distance: 50,
+                
+                   
+                    source: new ol.source.Vector(
+                        {
+                            format: new ol.format.GeoJSON(),
+                            url: '/data/other_2006_2019.geojson'
+                        }
+                    )
                 }
             ),
         title: 'Ladybirds (other) 2006-2019',
-        visible: false
+        visible: false,
+        style: getStyle
         }
     );
 
     harlq_1972_2005 = new ol.layer.Vector(
         {
-            source: new ol.source.Vector(
+            source: new ol.source.Cluster(
+
                 {
-                    format: new ol.format.GeoJSON(),
-                    url: '/data/harlq_1972_2005.geojson'
+                    distance: 50,
+                
+                   
+                    source: new ol.source.Vector(
+                        {
+                            format: new ol.format.GeoJSON(),
+                            url: '/data/harlq_1972_2005.geojson'
+                        }
+                    )
                 }
             ),
         title: 'Ladybirds (harlequin) 1972-2005',
-        visible: false
+        visible: false,
+        style: getStyle
         }
     );
 
     harlq_2006_2019 = new ol.layer.Vector(
         {
-            source: new ol.source.Vector(
+            source: new ol.source.Cluster(
+
                 {
-                    format: new ol.format.GeoJSON(),
-                    url: '/data/harlq_2006_2019.geojson'
+                    distance: 50,
+                    
+                    source: new ol.source.Vector(
+                        {
+                            format: new ol.format.GeoJSON(),
+                            url: '/data/harlq_2006_2019.geojson'
+                        }
+                    )
                 }
             ),
         title: 'Ladybirds (harlequin) 2006_2019',
-        visible: false
+        visible: false,
+        style: getStyle
         }
     );
     // Create a view
